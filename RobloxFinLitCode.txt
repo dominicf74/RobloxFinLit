@@ -1,0 +1,592 @@
+/RobloxFinLit Code
+	/Scripts
+		
+local Part = script.Parent
+
+local function destroy()
+	if(_G.cash.Value >= 2000) then
+	wait(1)
+	Part:Destroy() 
+	end
+end
+
+Part.touched:Connect(destroy)
+
+//Budget
+
+Popup = script.Parent.ScreenGui ----- Your ScreenGUI's name
+Ready = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name)
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		wait(8)
+		c:remove()
+		wait(5)
+		Ready = true
+		_G.cash.Value += 50
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "A great way to meet your financial goals is through creating a budget. \nTo create a budget you write down all your expenses and \nsee where you can save and where you have money to spend.\nHead inside to learn more!"
+
+//Budget3
+
+Popup = script.Parent.ScreenGui
+Ready = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name) 
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		wait(5) 
+		c:remove()
+		wait(5)
+		Ready = true
+		_G.cash.Value += 50
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "Choices like this are very important. Your budget is limited,\nso choose healthy meals and items that are worth your money."
+
+//Casino
+
+Popup = script.Parent.ScreenGui
+Ready = true
+
+
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name)
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+
+		wait(6) 
+		c:remove() 
+		wait(5)
+		Ready = true
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "Careful! The casino isn't a reliable way to make money.\nThe majority of people lose when they bet at a casino."
+
+//Dialogue1Intro
+
+Popup = script.Parent.ScreenGui
+Ready = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name) 
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		wait(5) 
+		c:remove() 
+		wait(5)
+		Ready = true
+		_G.cash.Value += 50
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+//Dialogue2Budget
+
+Popup = script.Parent.ScreenGui
+Ready = true
+
+
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name)
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+
+		wait(8) 
+		c:remove() 
+		wait(4)
+		_G.cash.Value += 50
+		Ready = true
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "Budgeting is about making choices. When you're purchasing food and other items,\n think if its worth your money, or if its better off to save it."
+
+//Dialogue2SavePart
+
+Popup = script.Parent.ScreenGui 
+Ready = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name) 
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		_G.cash.Value += 500
+		wait(6) 
+		c:remove() 
+
+		wait(5)
+		Ready = true
+
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "Rule 1: SAVE. It's always important to keep some of the money you get,\nwhether from your allowance or your first job,\nin a safe spot for later. Here's a couple bucks for you to save!"
+script.Parent.FontSize = 20
+script.Parent.BackgroundColor3 = {202,255,193}
+script.Parent.TextColor3 = Color3.new(0,0,0)
+script.Parent.AutomaticSize = 1
+
+//Dialogue3Savings
+
+Popup = script.Parent.ScreenGui 
+Ready = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name) 
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		_G.cash.Value += 50
+		wait(6) ------ Htime for GUI to disappear 
+		c:remove()
+
+		wait(5)
+		Ready = true
+
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "There are two ways to save: In cash, like in this piggy bank, or in a savings account at a bank."
+
+//Save/Keep
+
+Popup = script.Parent.ScreenGui
+Ready = true
+
+
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name)
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		
+		wait(10) 
+		c:remove() 
+	
+		
+	end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "It's your turn! Choose to save your money and receive extra money later, or keep everything you have now.\nSometimes it's best to do a little of both!"
+
+/
+
+_G.cash.Value = 1000
+script.Parent.Text = 0
+
+/
+
+local textButton = script.Parent
+
+
+textButton.Text = "+"
+
+local function onActivated()
+	script.Parent.Parent.Text += 50
+	
+end
+
+textButton.Activated:Connect(onActivated)
+
+/
+
+--script.Parent.Text = "Deposit"
+--local textButton = script.Parent
+--local function onActivated()
+	
+	
+	--local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	--local CashTransfer = ReplicatedStorage:WaitForChild("CashTransfer")
+
+	-- Function to handle receiving the cash value
+	--CashTransfer.OnClientEvent:Connect(function(cashValue)
+		--print("Received cash value: ", cashValue) 
+		--local moneycount = cashValue 
+
+		
+		--moneycount -= tonumber(script.Parent.Parent.Text)
+		--script.Parent.Parent.Text = 0
+		--print("Modified moneycount: ", moneycount) -- Debug print
+
+		
+		--CashTransfer:FireServer(moneycount)
+	--end)
+	
+--end
+
+--textButton.Activated:Connect(onActivated)
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local CashTransfer = ReplicatedStorage:WaitForChild("CashTransfer") -- Ensure RemoteEvent exists
+
+local button = script.Parent -- Reference to the button
+
+-- Function to handle receiving the cash value
+CashTransfer.OnClientEvent:Connect(function(cashValue)
+	print("Received cash value: ", cashValue) -- Debug print
+	local moneycount = cashValue  -- Set moneycount to the received value
+	print(moneycount)
+	
+	if(moneycount > 50 and tonumber(script.Parent.Parent.Text) <= moneycount) then
+	moneycount -= tonumber(script.Parent.Parent.Text)
+	script.Parent.Parent.Text = 0
+	print("Modified moneycount: ", moneycount) -- Debug print then
+	end
+
+	-- Send the modified moneycount back to the server
+	CashTransfer:FireServer(moneycount)
+end)
+
+-- Function to handle button click
+button.MouseButton1Click:Connect(function()
+	print("Button clicked!") -- Debug print
+	CashTransfer:FireServer() -- Notify the server to send the current cash value
+end)
+
+/
+
+local textButton = script.Parent
+
+
+textButton.Text = "-"
+
+local function onActivated()
+	if(tonumber(script.Parent.Parent.Text) > 0) then
+		script.Parent.Parent.Text -= 50
+	end
+	
+end
+
+textButton.Activated:Connect(onActivated)
+
+//WallStreet
+
+Popup = script.Parent.ScreenGuiReady = true
+function onTouch(hit)
+	local h = hit.Parent:FindFirstChild("Humanoid")
+	if h ~= nil and Ready == true then
+		Ready = false
+		local plyr = game.Players:FindFirstChild(h.Parent.Name)
+		local c = Popup:clone()
+		c.Parent = plyr.PlayerGui
+		wait(8) 
+		c:remove() 		
+		wait(5)
+		Ready = true
+		end
+end
+
+script.Parent.Touched:connect(onTouch)
+
+/
+
+script.Parent.Text = "Welcome to Wall Street! \n This is a stock market. \n A stock is a piece of a company, which that company sells to make money. \n When you own a stock, \nyou own part of that company and get a share of its profits, called a dividend. \nA stock market is a place where these shares are traded. \n People investing in stocks can also make money when investor demand for their \nstock increases and they sell it for more than the purchasing price."
+
+//Configuration
+
+local Configuration = {}
+
+Configuration.RunKey = Enum.KeyCode.LeftShift -- Change this to your key
+
+Configuration.WalkSpeed = game.StarterPlayer.CharacterWalkSpeed
+Configuration.RunSpeed = 25
+
+Configuration.WalkFov = workspace.Camera.FieldOfView
+Configuration.RunFov = 80
+Configuration.Duration = 0.2 -- How long it will take to change from the Walk to Run
+
+Configuration.WalkAnimationId = nil -- put nil if you want default animations
+Configuration.RunAnimationId = nil -- put nil if you want default animations
+
+return Configuration
+
+//CarPurchaseScript
+
+repeat task.wait() until _G.cash ~= nil
+local cash = _G.cash
+local carButton = workspace.Tycoons.Buttons["Car Spawner"]
+local car = game:GetService("ServerStorage").Car
+local carSpawn = workspace.CarSpawnLocation
+carButton.Color = Color3.new(0.0156863, 1, 0)
+local debounce = carSpawn.Debounce.Value
+carButton.Touched:Connect(function(toucher)
+	if (toucher.Parent:FindFirstChild("Humanoid") and debounce == "false" and carButton.Color ~= Color3.new(1, 0, 0.0156863)) then
+		debounce = "true"
+		carButton.Color = Color3.new(1, 0, 0.0156863)
+		cash.Value = cash.Value - 1000
+		
+		--spawn car
+		local clone = car:Clone()
+		clone.Parent = workspace
+		clone:PivotTo(carSpawn.CFrame)
+		task.wait(10)
+		debounce = "false"
+		carButton.Color = Color3.new(0.235294, 1, 0)
+	end
+end)
+
+//Script(update global money, send to children using replicated storage, 2 way network)
+
+if not _G.cash then
+	_G.cash = Instance.new("IntValue")
+	_G.cash.Value = 1000
+end
+
+-- ServerScript in ServerScriptService
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local CashTransfer = ReplicatedStorage:WaitForChild("CashTransfer")
+
+-- Initialize _G.cash if it doesn't exist
+_G.cash = _G.cash or { Value = 0 }
+
+-- Function to send the cash value to a player
+local function sendCashValue(player)
+	print("Sending cash value to player: ", _G.cash.Value) -- Debug print
+	CashTransfer:FireClient(player, _G.cash.Value)
+end
+
+-- Event to listen for player joining
+game.Players.PlayerAdded:Connect(function(player)
+	-- Send the cash value when the player joins
+	sendCashValue(player)
+end)
+
+-- Listen for cash value updates from the client
+CashTransfer.OnServerEvent:Connect(function(player, moneycount)
+	if moneycount then
+		_G.cash.Value = moneycount  -- Update the global variable
+		print("Updated _G.cash.Value to: ", _G.cash.Value) -- Debug print
+	else
+		-- If no moneycount is provided, send the current cash value
+		sendCashValue(player)
+	end
+end)
+
+//leaderstats
+
+game.Players.PlayerAdded:Connect(function(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+	
+	_G.cash = Instance.new("IntValue")
+	_G.cash.Name = "Cash"
+	_G.cash.Value = 1000
+	_G.cash.Parent = leaderstats
+
+end)
+
+//ShiftToRun(plugin)
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local camera = game.Workspace.CurrentCamera
+
+local UIS = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local Configuration = require(game.ReplicatedStorage:WaitForChild("Configuration"))
+
+if Configuration.WalkAnimationId ~= nil then
+	character.Animate.walk.WalkAnim.AnimationId = "rbxassetid://"..Configuration.WalkAnimationId
+end
+
+if Configuration.RunAnimationId ~= nil then
+	character.Animate.run.RunAnim.AnimationId = "rbxassetid://"..Configuration.RunAnimationId
+end
+
+
+function IsWalking()
+	if humanoid.MoveDirection.Magnitude > 0 then
+		return true
+	else
+		return false
+	end
+end
+
+
+function Walk()
+	TweenService:Create(humanoid, TweenInfo.new(Configuration.Duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {WalkSpeed = Configuration.WalkSpeed}):Play()
+	TweenService:Create(camera, TweenInfo.new(Configuration.Duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {FieldOfView = Configuration.WalkFov}):Play()
+end
+
+function Run()
+	TweenService:Create(humanoid, TweenInfo.new(Configuration.Duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {WalkSpeed = Configuration.RunSpeed}):Play()
+	TweenService:Create(camera, TweenInfo.new(Configuration.Duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {FieldOfView = Configuration.RunFov}):Play()
+end
+
+
+UIS.InputBegan:Connect(function(key, proccess)
+	if key.KeyCode == Configuration.RunKey then
+		if IsWalking() then
+			Run()
+		end
+	end
+end)
+
+UIS.InputEnded:Connect(function(key, proccess)
+	if key.KeyCode == Configuration.RunKey then
+		Walk()
+	end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	if IsWalking() == false then
+		Walk()
+	end
+end)
+
+//StockScreen1
+
+
+	/StockButtonsHandler
+	repeat task.wait() until _G.cash ~= nil
+local cash = _G.cash.Value
+
+local purchase = script.Parent.SurfaceGui.Purchase
+local sell = script.Parent.SurfaceGui.Sell
+
+purchase.MouseButton1Click:Connect(function()
+	warn("purchase")
+	local price = script.Parent.SurfaceGui.CurrentPrice.Number.Value
+	if price <= _G.cash.Value then
+		_G.cash.Value = _G.cash.value - price
+		script.Parent.SurfaceGui.YourShares.Shares.Value += 1
+		script.Parent.SurfaceGui.YourShares.Text = "Your Shares: " .. tostring(script.Parent.SurfaceGui.YourShares.Shares.Value)
+	end
+end)
+
+sell.MouseButton1Click:Connect(function()
+	warn("sell")
+	local price = script.Parent.SurfaceGui.CurrentPrice.Number.Value
+	local shares = script.Parent.SurfaceGui.YourShares.Shares.Value
+	if shares > 0 then
+		_G.cash.Value = _G.cash.Value + price
+		script.Parent.SurfaceGui.YourShares.Shares.Value -= 1
+		script.Parent.SurfaceGui.YourShares.Text = "Your Shares: " .. tostring(script.Parent.SurfaceGui.YourShares.Shares.Value)
+	end
+end)
+
+	/StockScript
+
+	local currPrice = script.Parent.SurfaceGui.CurrentPrice.Number.Value
+local currPriceText = script.Parent.SurfaceGui.CurrentPrice.Text
+
+script.Parent.SurfaceGui.CurrentPrice.Number.Value = math.random(50)
+task.wait(3)
+while true do
+	local multi = math.random(-10, 10)
+	if multi > 0 then
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(0, 1, 0)
+	else 
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(1, 0, 0)
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Number.Value += multi
+	if script.Parent.SurfaceGui.CurrentPrice.Number.Value < 0 then
+		script.Parent.SurfaceGui.CurrentPrice.Number.Value = 0
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Text = "Stock Price: " .. tostring(script.Parent.SurfaceGui.CurrentPrice.Number.Value)
+	task.wait(5)
+end
+
+	//StockScript2
+
+	local currPrice = script.Parent.SurfaceGui.CurrentPrice.Number.Value
+local currPriceText = script.Parent.SurfaceGui.CurrentPrice.Text
+
+script.Parent.SurfaceGui.CurrentPrice.Number.Value = math.random(100)
+task.wait(3)
+while true do
+	local multi = math.random(-4, 4)
+	if multi > 0 then
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(0, 1, 0)
+	else 
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(1, 0, 0)
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Number.Value += multi
+	if script.Parent.SurfaceGui.CurrentPrice.Number.Value < 0 then
+		script.Parent.SurfaceGui.CurrentPrice.Number.Value = 0
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Text = "Stock Price: " .. tostring(script.Parent.SurfaceGui.CurrentPrice.Number.Value)
+	task.wait(.25)
+end
+
+	//StockScript3
+
+	local currPrice = script.Parent.SurfaceGui.CurrentPrice.Number.Value
+local currPriceText = script.Parent.SurfaceGui.CurrentPrice.Text
+
+script.Parent.SurfaceGui.CurrentPrice.Number.Value = math.random(500)
+task.wait(3)
+while true do
+	local multi = math.random(-100, 100)
+	if multi > 0 then
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(0, 1, 0)
+	else 
+		script.Parent.SurfaceGui.CurrentPrice.TextColor3 = Color3.new(1, 0, 0)
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Number.Value += multi
+	if script.Parent.SurfaceGui.CurrentPrice.Number.Value < 0 then
+		script.Parent.SurfaceGui.CurrentPrice.Number.Value = 0
+	end
+	script.Parent.SurfaceGui.CurrentPrice.Text = "Stock Price: " .. tostring(script.Parent.SurfaceGui.CurrentPrice.Number.Value)
+	task.wait(15)
+end
+
+	
